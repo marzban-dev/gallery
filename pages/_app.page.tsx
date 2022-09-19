@@ -17,10 +17,10 @@ function MyApp({Component, pageProps}: AppProps) {
             <Head>
                 <title>Tv Show</title>
             </Head>
-            <script id="jquery-cdn" src="assets/js/jquery.min.js" defer/>
-            <script id="jquery-easings-cdn" src="assets/js/jquery.easings.min.js" defer/>
-            <script id="scrolloverflow-cdn" src="assets/js/scrolloverflow.min.js" defer/>
-            <script id="fullpage-cdn" src="assets/js/jquery.fullpage.min.js" defer/>
+            <script src="assets/js/jquery.min.js" defer></script>
+            <script src="assets/js/jquery.easings.min.js" defer></script>
+            <script src="assets/js/scrolloverflow.min.js" defer></script>
+            <script src="assets/js/jquery.fullpage.min.js" defer></script>
             <QueryClientProvider client={queryClient.current}>
                 <Hydrate state={pageProps.dehydratedState}>
                     <SessionProvider session={pageProps.session}>
