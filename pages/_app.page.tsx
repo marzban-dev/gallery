@@ -17,10 +17,6 @@ function MyApp({Component, pageProps}: AppProps) {
             <Head>
                 <title>Tv Show</title>
             </Head>
-            <Script strategy="beforeInteractive" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
-            <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/jquery.easings.min.js" />
-            <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" />
-            <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" />
             <QueryClientProvider client={queryClient.current}>
                 <Hydrate state={pageProps.dehydratedState}>
                     <SessionProvider session={pageProps.session}>
