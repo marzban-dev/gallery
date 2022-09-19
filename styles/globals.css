@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow: hidden;
+}
+
+.image-mask {
+    mask-image: url("../public/assets/img/home-mask-1.png");
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: right;
+}
