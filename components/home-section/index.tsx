@@ -5,10 +5,6 @@ import Image1 from "public/assets/img/image-1.jpg";
 
 const HomeSection: React.FC = () => {
 
-    useEffect(() => {
-
-    }, []);
-
     return (
         <section className="h-screen page-section w-full">
             <div className="h-full image-mask relative w-[710px]">
