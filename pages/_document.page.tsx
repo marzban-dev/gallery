@@ -14,7 +14,7 @@ export default function Document() {
             <Main/>
             <NextScript/>
             </body>
-            <Script strategy="beforeInteractive" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
+            <Script strategy="beforeInteractive" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
             <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/jquery.easings.min.js" />
             <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" />
             <Script strategy="beforeInteractive" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" />
