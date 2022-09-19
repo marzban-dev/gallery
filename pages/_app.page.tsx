@@ -1,6 +1,6 @@
 import 'styles/globals.css'
 import type {AppProps} from 'next/app'
-import {dehydrate,QueryClient, QueryClientProvider, Hydrate} from "@tanstack/react-query";
+import {dehydrate, QueryClient, QueryClientProvider, Hydrate} from "@tanstack/react-query";
 import {ParallaxProvider} from 'react-scroll-parallax';
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 import {SessionProvider} from "next-auth/react";
@@ -17,9 +17,7 @@ function MyApp({Component, pageProps}: AppProps) {
                 <title>Tv Show</title>
             </Head>
             <QueryClientProvider client={queryClient.current}>
-                {/* @ts-ignore */}
                 <Hydrate state={pageProps.dehydratedState}>
-                    {/* @ts-ignore */}
                     <SessionProvider session={pageProps.session}>
                         <ParallaxProvider>
                             <Component {...pageProps} />
