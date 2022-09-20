@@ -20,7 +20,7 @@ module.exports = {
             // => @media (min-width: 1536px) { ... }
         },
         fontFamily: {
-            // lato: ["Lato", "sans-serif"],
+            italiana: ["Italiana", "sans-serif"],
         },
         extend: {
             colors: {

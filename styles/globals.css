@@ -6,6 +6,12 @@ html {
     overflow: hidden !important;
 }
 
+.page-section-header > .fp-tableCell {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
 .image-mask {
     mask-image: url("../public/assets/img/home-mask-1.png");
     mask-size: cover;

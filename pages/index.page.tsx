@@ -5,9 +5,12 @@ import React, {useEffect, useRef, useState} from "react";
 import {Parallax} from 'react-scroll-parallax';
 // import Fullpage, {FullPageSections, FullpageSection} from '@ap.cx/react-fullpage';
 import {motion} from "framer-motion"
-import {HomeSection} from "components";
+import {Header} from "./components";
+import Pagination from "pages/components/header/components/pagination";
 
 const Home: NextPage = () => {
+    const [activeSection, setActiveSection] = useState("I");
+    const symbols = ["I","II","III","IV","V","VI"];
 
     useEffect(() => {
         // const scene = document.getElementById('scene');
@@ -19,18 +22,12 @@ const Home: NextPage = () => {
             // @ts-ignore
             $('#fullpage').fullpage({
                 scrollBar: true,
-                sectionSelector: '.page-section',
+                sectionSelector: '.page-section-header',
                 scrollingSpeed: 1200,
-                afterLoad : function () {
-                    // @ts-ignore
-                    let loadedSection = $(this);
-                    console.log(loadedSection)
-                    // const fullPageWrappers = document.querySelectorAll(".fp-tableCell");
-                    //
-                    // fullPageWrappers.forEach(el => {
-                    //     el.setAttribute("class", "fp-tableCell flex justify-end items-center")
-                    // });
-                }
+                // @ts-ignore
+                afterLoad: function (anchorLink, index) {
+                    setActiveSection(symbols[index - 1])
+                },
             });
         });
     }, []);
@@ -38,9 +35,12 @@ const Home: NextPage = () => {
     return (
         <main className="bg-[#C5BFAB] w-full" id="fullpage">
 
-            <HomeSection />
-            <HomeSection />
-            <HomeSection />
+            <Pagination activeSection={activeSection}/>
+
+            <Header/>
+            <Header/>
+            <Header/>
+
             {/*<div id="scene">*/}
             {/*    <div data-depth="0.2">My first Layer!</div>*/}
             {/*    <div data-depth="0.6">My second Layer!</div>*/}
