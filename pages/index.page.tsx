@@ -1,16 +1,13 @@
 import type {NextPage} from 'next';
-import Image1 from "public/assets/img/image-1.jpg";
-import Image from "next/image";
 import React, {useEffect, useRef, useState} from "react";
 import {Parallax} from 'react-scroll-parallax';
-// import Fullpage, {FullPageSections, FullpageSection} from '@ap.cx/react-fullpage';
-import {motion} from "framer-motion"
-import {Header} from "./components";
+import {Header, HomeSection, HomeSection2} from "./components";
 import Pagination from "pages/components/header/components/pagination";
+import Image from "next/image";
+import Image8 from "public/assets/img/image-8.jpg";
 
 const Home: NextPage = () => {
-    const [activeSection, setActiveSection] = useState("I");
-    const symbols = ["I","II","III","IV","V","VI"];
+    const [activeSection, setActiveSection] = useState(1);
 
     useEffect(() => {
         // const scene = document.getElementById('scene');
@@ -22,11 +19,11 @@ const Home: NextPage = () => {
             // @ts-ignore
             $('#fullpage').fullpage({
                 scrollBar: true,
-                sectionSelector: '.page-section-header',
+                sectionSelector: '.page-section',
                 scrollingSpeed: 1200,
                 // @ts-ignore
-                afterLoad: function (anchorLink, index) {
-                    setActiveSection(symbols[index - 1])
+                onLeave: function (index, nextIndex, direction) {
+                    setActiveSection(nextIndex)
                 },
             });
         });
@@ -34,17 +31,14 @@ const Home: NextPage = () => {
 
     return (
         <main className="bg-[#C5BFAB] w-full" id="fullpage">
-
             <Pagination activeSection={activeSection}/>
-
             <Header/>
-            <Header/>
-            <Header/>
-
-            {/*<div id="scene">*/}
-            {/*    <div data-depth="0.2">My first Layer!</div>*/}
-            {/*    <div data-depth="0.6">My second Layer!</div>*/}
-            {/*</div>*/}
+            <HomeSection activeSection={activeSection}/>
+            <HomeSection2 activeSection={activeSection}/>
+            <div className="fixed z-[15] w-full h-full">
+                <div className="relative w-full h-full z-[6] bg-[rgba(197,191,171,0.85)]"/>
+                <Image src={Image8} layout="fill" objectFit="cover" objectPosition="bottom"/>
+            </div>
         </main>
     )
 }

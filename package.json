@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.3.0",
-    "@fullpage/react-fullpage": "^0.1.26",
+    "@fullpage/react-fullpage": "^0.1.28",
     "@tanstack/react-query": "^4.3.7",
     "@tanstack/react-query-devtools": "^4.3.7",
     "axios": "^0.27.2",

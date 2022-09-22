@@ -21,10 +21,11 @@ module.exports = {
         },
         fontFamily: {
             italiana: ["Italiana", "sans-serif"],
+            bodoni: ["Libre Bodoni", "sans-serif"],
         },
         extend: {
             colors: {
-                primary: {},
+                primary: "rgba(197,191,171,0.8)",
                 secondary: {},
             },
             backgroundImage: {}

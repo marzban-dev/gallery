@@ -3,7 +3,7 @@ import {Parallax} from "react-scroll-parallax";
 import Image from "next/image";
 import Image1 from "public/assets/img/image-1.jpg";
 import {motion, Variants} from "framer-motion";
-import Pagination from "./components/pagination";
+import Image8 from "public/assets/img/image-8.jpg";
 
 const Header: React.FC = () => {
 
@@ -66,34 +66,35 @@ const Header: React.FC = () => {
     }
 
     return (
-        <header className="h-screen page-section-header w-full">
+        <header className="page-section w-full relative" id="header-section">
+            <Parallax opacity={[5, -2]}>
+                <motion.h1
+                    variants={titleContainerVariants}
+                    initial="hide"
+                    animate="show"
+                    className="font-italiana text-black text-[70px] ml-[120px] mt-[70px]"
+                >
+                    <motion.div variants={titleVariants}>
+                        MINIMALIST
+                    </motion.div>
 
-            <motion.h1
-                variants={titleContainerVariants}
-                initial="hide"
-                animate="show"
-                className="font-italiana text-black text-[70px] ml-[150px] mt-[70px]"
-            >
-                <motion.div variants={titleVariants}>
-                    MINIMALIST
-                </motion.div>
+                    <motion.div variants={titleVariants} className="text-[#804533]">
+                        STRING
+                    </motion.div>
 
-                <motion.div variants={titleVariants} className="text-[#804533]">
-                    STRING
-                </motion.div>
+                    <motion.div variants={titleVariants}>
+                        FOR LOREM
+                    </motion.div>
 
-                <motion.div variants={titleVariants}>
-                    FOR LOREM
-                </motion.div>
+                    <motion.div variants={titleVariants}>
+                        COLLECTION
+                    </motion.div>
 
-                <motion.div variants={titleVariants}>
-                    COLLECTION
-                </motion.div>
-
-                <motion.div variants={titleVariants}>
-                    DOL.
-                </motion.div>
-            </motion.h1>
+                    <motion.div variants={titleVariants}>
+                        DOL.
+                    </motion.div>
+                </motion.h1>
+            </Parallax>
 
             <motion.div
                 variants={maskVariants}

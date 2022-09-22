@@ -1,3 +1,3 @@
 export interface IPaginationProps {
-    activeSection : string
+    activeSection : number
 }

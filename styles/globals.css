@@ -6,15 +6,46 @@ html {
     overflow: hidden !important;
 }
 
-.page-section-header > .fp-tableCell {
+#header-section > .fp-tableCell {
     display: flex;
     justify-content: space-between;
     align-items: start;
+}
+
+
+#home-section > .fp-tableCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 100%;
+}
+
+#home-section-2 > .fp-tableCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 100%;
 }
 
 .image-mask {
     mask-image: url("../public/assets/img/home-mask-1.png");
     mask-size: cover;
     mask-repeat: no-repeat;
-    mask-position: right;
+    mask-position: right top;
+}
+
+.image-mask-2 {
+    mask-image: url("../public/assets/img/mask-2.png");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: left top;
+}
+
+.image-mask-3 {
+    mask-image: url("../public/assets/img/mask-3.png");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: right bottom;
 }
