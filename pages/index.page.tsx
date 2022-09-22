@@ -35,10 +35,6 @@ const Home: NextPage = () => {
             <Header/>
             <HomeSection activeSection={activeSection}/>
             <HomeSection2 activeSection={activeSection}/>
-            <div className="fixed z-[15] w-full h-full">
-                <div className="relative w-full h-full z-[6] bg-[rgba(197,191,171,0.85)]"/>
-                <Image src={Image8} layout="fill" objectFit="cover" objectPosition="bottom"/>
-            </div>
         </main>
     )
 }

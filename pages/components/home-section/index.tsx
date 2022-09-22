@@ -68,6 +68,21 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
         }
     }
 
+    const textVariants: Variants = {
+        hide: {
+            opacity: 0,
+            transition: {
+                duration: 0.9
+            }
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                duration: 0.9
+            }
+        }
+    }
+
     return (
         <section className="page-section relative h-screen" id="home-section">
             <div className="w-full flex justify-start items-start">
@@ -83,23 +98,33 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
                         </Parallax>
                     </div>
                 </motion.div>
-                <div className="flex justify-center items-center w-[calc(100%-650px)] mt-[70px]">
+                <motion.div
+                    variants={textVariants}
+                    initial="hide"
+                    animate={activeSection === 2 ? "show" : "hide"}
+                    className="flex justify-center items-center w-[calc(100%-650px)] mt-[70px]"
+                >
                     <p className="font-italiana text-[50px]">
                         MINIMALIST<br/>
                         <span className="text-[#804533]">STRONG</span> FOR LOREM<br/>
                         COLLECTION DOL<br/>
                     </p>
-                </div>
+                </motion.div>
             </div>
             <div className="w-full flex justify-end items-start">
-                <div className="flex justify-start items-center translate-y-[-300px] w-[calc(100%-650px)] pl-[110px] mt-[70px]">
+                <motion.div
+                    variants={textVariants}
+                    initial="hide"
+                    animate={activeSection === 2 ? "show" : "hide"}
+                    className="flex justify-start items-center translate-y-[-300px] w-[calc(100%-650px)] pl-[110px] mt-[70px]"
+                >
                     <p className="font-italiana text-[24px] font-bodoni italic text-[#3C3C3C]">
                         I present three versions of the website<br/>
                         concept for the mobile version related to<br/>
                         the science and history of painting and<br/>
                         artistic photography.
                     </p>
-                </div>
+                </motion.div>
                 <motion.div
                     variants={imageBottomVariants}
                     initial="hide"
