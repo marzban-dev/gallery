@@ -12,7 +12,6 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
         hide: {
             opacity: 0,
             x: -200,
-            y: -300,
             transition: {
                 opacity: {
                     duration: 0.9
@@ -25,7 +24,6 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
         show: {
             opacity: 1,
             x: 0,
-            y: -300,
             transition: {
                 delay: 0.3,
                 opacity: {
@@ -42,7 +40,6 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
         hide: {
             opacity: 0,
             x: 200,
-            y: -400,
             transition: {
                 opacity: {
                     duration: 0.9
@@ -55,7 +52,6 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
         show: {
             opacity: 1,
             x: 0,
-            y: -400,
             transition: {
                 delay: 0.3,
                 opacity: {
@@ -85,24 +81,22 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
 
     return (
         <section className="page-section relative h-screen" id="home-section">
-            <div className="w-full flex justify-start items-start">
+            <div className="w-full flex justify-start items-start relative">
                 <motion.div
                     variants={imageTopVariants}
                     initial="hide"
                     animate={activeSection === 2 ? "show" : "hide"}
-                    className="h-full image-mask-2 relative w-[650px] h-screen"
+                    className="image-mask-2 absolute w-[650px] h-screen top-[-300px]"
                 >
-                    <div className="w-full h-full">
-                        <Parallax translateY={[-35, 35]} className="w-full h-full">
-                            <Image src={Image2} layout="fill" objectFit="cover"/>
-                        </Parallax>
-                    </div>
+                    <Parallax translateY={[-35, 35]} className="w-full h-full">
+                        <Image src={Image2} layout="fill" objectFit="cover"/>
+                    </Parallax>
                 </motion.div>
                 <motion.div
                     variants={textVariants}
                     initial="hide"
                     animate={activeSection === 2 ? "show" : "hide"}
-                    className="flex justify-center items-center w-[calc(100%-650px)] mt-[70px]"
+                    className="flex justify-end items-center w-full absolute top-[70px] right-[150px]"
                 >
                     <p className="font-italiana text-[50px]">
                         MINIMALIST<br/>
@@ -111,12 +105,14 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
                     </p>
                 </motion.div>
             </div>
-            <div className="w-full flex justify-end items-start">
+
+
+            <div className="w-full flex justify-end items-end relative">
                 <motion.div
                     variants={textVariants}
                     initial="hide"
                     animate={activeSection === 2 ? "show" : "hide"}
-                    className="flex justify-start items-center translate-y-[-300px] w-[calc(100%-650px)] pl-[110px] mt-[70px]"
+                    className="flex justify-start items-center absolute bottom-[70px] w-full left-[150px]"
                 >
                     <p className="font-italiana text-[24px] font-bodoni italic text-[#3C3C3C]">
                         I present three versions of the website<br/>
@@ -129,13 +125,11 @@ const HomeSection: React.FC<{ activeSection: number }> = ({activeSection}) => {
                     variants={imageBottomVariants}
                     initial="hide"
                     animate={activeSection === 2 ? "show" : "hide"}
-                    className="image-mask-3 relative w-[650px] h-screen"
+                    className="image-mask-3 absolute w-[650px] h-screen bottom-[-350px]"
                 >
-                    <div className="w-full h-full">
-                        <Parallax translateY={[-35, 35]} opacity={[-1, 5]} className="w-full h-full">
-                            <Image src={Image3} layout="fill" objectFit="cover"/>
-                        </Parallax>
-                    </div>
+                    <Parallax translateY={[-35, 35]} opacity={[-1, 5]} className="w-full h-full">
+                        <Image src={Image3} layout="fill" objectFit="cover"/>
+                    </Parallax>
                 </motion.div>
             </div>
         </section>

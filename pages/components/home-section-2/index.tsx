@@ -96,7 +96,7 @@ const HomeSection2: React.FC<{ activeSection: number }> = ({activeSection}) => {
             </div>
 
 
-            <div className="w-full flex justify-end items-end">
+            <div className="w-full flex justify-end items-end relative">
                 <motion.div
                     variants={imageBottomVariants}
                     initial="hide"

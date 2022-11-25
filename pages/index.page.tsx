@@ -1,10 +1,9 @@
 import type {NextPage} from 'next';
 import React, {useEffect, useRef, useState} from "react";
-import {Parallax} from 'react-scroll-parallax';
-import {Header, HomeSection, HomeSection2} from "./components";
+import Header from "./components/header";
+import HomeSection from "./components/home-section";
+import HomeSection2 from "./components/home-section-2";
 import Pagination from "pages/components/header/components/pagination";
-import Image from "next/image";
-import Image8 from "public/assets/img/image-8.jpg";
 
 const Home: NextPage = () => {
     const [activeSection, setActiveSection] = useState(1);
@@ -27,6 +26,7 @@ const Home: NextPage = () => {
                 },
             });
         });
+
     }, []);
 
     return (

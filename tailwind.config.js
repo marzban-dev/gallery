@@ -28,7 +28,9 @@ module.exports = {
                 primary: "rgba(197,191,171,0.8)",
                 secondary: {},
             },
-            backgroundImage: {}
+            backgroundImage: {
+                // 'explore-slider-bg': "url('/assets/img/explore-slider-bg.jpg')"
+            }
         },
     },
     plugins: [
